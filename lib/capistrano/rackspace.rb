@@ -1,6 +1,6 @@
 require 'fog' 
 
-class RackspaceHelper
+class Rackspace
 
   class Configuration
 
