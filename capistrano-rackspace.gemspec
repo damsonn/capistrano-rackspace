@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |gem|
   gem.name = 'capistrano-rackspace'
-  gem.version = '0.0.3'
+  gem.version = '0.0.5'
   gem.date = '2015-03-09'
   gem.summary = 'Capistrano Rackspace Autoscale Helper'
   gem.description = 'If you use Rackspace Autoscale and want to find out which server'
@@ -14,4 +14,6 @@ Gem::Specification.new do |gem|
 
   gem.files = `git ls-files`.split($/)
   gem.require_paths = ["lib"]
+
+  gem.add_dependency 'fog'
 end
