@@ -12,6 +12,6 @@ Gem::Specification.new do |gem|
   gem.email = 'chris.kruger+rackspace_helper@mokosocialmedia.com'
   gem.license = 'MIT'
 
-  gem.files = ["lib/rackspace.rb"]
+  gem.files = `git ls-files`.split($/)
   gem.require_paths = ["lib"]
 end
