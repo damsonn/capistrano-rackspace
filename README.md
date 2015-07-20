@@ -1,17 +1,17 @@
-# Capistrano::Rackspace 
+# Capistrano::Rackspace
 
-A Capistrano 3.x plugin that provides dynamic configuration via the Rackspace API 
+A Capistrano 3.x plugin that provides dynamic configuration via the Rackspace API
 
-## Installation 
+## Installation
 
     gem 'capistrano-rackspace'
     gem 'capistrano'
 
-And then execute 
-    
+And then execute
+
     bundle install
 
-## Usage 
+## Usage
 
 Require in `Capfile` to use
 
@@ -19,9 +19,9 @@ Require in `Capfile` to use
 require 'capistrano/rackspace'
 ```
 
-You can then use the Rackspace functionality in the deploy/environment files 
+You can then use the Rackspace functionality in the deploy/environment files
 
-```ruby 
+```ruby
 Rackspace::Configuration.username = 'substitute.rackspace.username'
 Rackspace::Configuration.api_key = 'substitute.rackspace.api.key'
 Rackspace::Configuration.region = :ord
@@ -34,3 +34,4 @@ role :web, %w{deploy@standalone-server} + autoscale.addresses
 role :db,  %w{deploy@standalone-server}
 ```
 
+alternatively you can use `autoscale.private_addresses`, if you need the internal addresses.
